@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<form action="/submit" method="POST">
+    <div class="form-group">
+        <label for="dropdown">Choose an option:</label>
+        <select class="form-control" id="dropdown" name="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock content %}

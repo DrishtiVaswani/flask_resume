@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="content-container">
+    <div class="division">        
+        <!-- {% if get_flashed_messages() %}
+        <div class="flash-messages">
+            {% for message in get_flashed_messages() %}
+                <div class="alert alert-info">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %} -->
+        
+        <div class="form-container">
+            <form method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="file" class="form-label">Select a PDF file:</label>
+                    <input type="file" class="form-control" id="file" name="file" accept=".pdf">
+                </div>
+                <button type="submit" class="btn btn-outline-success">Upload & Extract Text</button>
+                <a href="/" class="btn btn-outline-secondary">Back to Home</a>
+            </form>
+        </div>
+        
+        <!-- {% if extracted_text %}
+        <div style="height: 0px; width: 900px; margin: 100px;">
+             <br/>
+             <p style="border-radius: 5px; background-color: rgba(188, 251, 230, 0.616); padding: 10px;">{{extracted_text}}</p>
+            </div> 
+        {% endif %} -->
+    </div>
+</div>
+{% endblock content %}

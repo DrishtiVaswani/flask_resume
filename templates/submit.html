@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h4 style="position: relative; left: 100px; top: 70px;">Add your Project</h4>
+<form action="{{ url_for('submit') }}" method="POST" enctype="multipart/form-data">
+    <div style="margin-top: 90px; margin-left: 100px;" class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input style="width: 700px;" name="title" type="text" class="form-control" id="title" placeholder="Enter the title of your project" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Table Description (optional)</label>
+        <textarea style="width: 700px; height: 100px;" name="description" class="form-control" id="description" placeholder="Describe table details"></textarea>
+    </div>    <button style="margin-left: 100px;" type="submit" class="btn btn-outline-success">Submit</button>
+</form>
+{% endblock %}

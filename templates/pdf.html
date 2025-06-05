@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="content-container">
+    <div class="division">
+        <h6 style="font-size: 20px; color: darkgreen;">Make a Request</h6>
+        <div class="buttons">
+            <a href="/gemini" style="text-decoration:none;"><button type="button" class="btn btn-outline-success">Write Cover Letter</button></a>
+            <a href="/gemini1" style="text-decoration:none;"><button type="button" class="btn btn-outline-success">Request Referral</button></a>
+            <a href="/gemini2" style="text-decoration:none;"><button type="button" class="btn btn-outline-success">Give career path recommendation</button></a>
+            <!-- <a href="/read"><button type="button" class="btn btn-outline-success">See Project</button></a>
+            <a href="/pdff"><button type="button" class="btn btn-outline-success">Chose File</button></a> -->
+        </div>
+    </div>
+</div>
+
+    {% if response_text %}
+    <div style="height: 0px; width: 1000px; margin: 50px;">
+        <h2 style="padding-bottom: 5px; padding-left: 10px;">Text</h2>
+        <br/>
+        <p style="border-radius: 5px; background-color: rgba(188, 251, 230, 0.616); padding: 10px;">{{response_text}}</p>
+        </div>
+    {%endif%} 
+{% endblock content %}

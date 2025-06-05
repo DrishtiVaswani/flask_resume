@@ -1,0 +1,101 @@
+{% extends 'layout.html' %}
+<!-- {% block stt %}
+ <style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin:100px;
+    }
+    .card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin: 50px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+        position: relative;
+        overflow: hidden;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .card h4 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .card p {
+        font-size: 1em;
+        color: #666;
+        margin-bottom: 15px;
+    }
+    .card button {
+        margin: 5px;
+    }
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #6ec1e4, #333);
+        clip-path: circle(0% at 50% 50%);
+        transition: clip-path 0.5s ease-in-out;
+    }
+    .card:hover::before {
+        clip-path: circle(75% at 50% 50%);
+    }
+    .card-content {
+        position: relative;
+        z-index: 1;
+    }
+</style>
+{% endblock stt %}  -->
+
+
+<!-- {%if blog|length==0%}
+    <h4 style="margin: 250px;">Nothing to display</h4>
+{%else%}
+    <div class="content-container">
+        {% for blogs in blog %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ blogs.title }}</h5>
+                <p class="card-text">{{ blogs.description }}</p>
+                <div class="buttons">
+                    <a href="/update/{{blogs.sno}}" class="btn btn-outline-success">Update</a>
+                    <a href="/delete/{{blogs.sno}}" class="btn btn-outline-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {%endif%}
+        <a href="/add" class="btn btn-success mt-3">Add Blog</a>
+    </div> -->
+
+{% block content %}
+    {%if blog|length==0%}
+    <h4 style="margin: 250px;">Nothing to display</h4>
+    {%else%}
+    <div class="content-container">
+        {% for blogs in blog %}
+        <div class="card">
+            <div class="card-body">
+                <a href="/individual/{{blogs.sno}}"><h5 class="card-title">{{ blogs.title }}</h5></a>
+                <p class="card-text">{{ blogs.description }}</p>
+                <div class="buttons">
+                    <a href="/update/{{blogs.sno}}" class="btn btn-outline-success">Update</a>
+                    <a href="/delete/{{blogs.sno}}" class="btn btn-outline-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {%endif%}
+        <!-- <a href="/add" class="btn btn-success mt-3">Add Blog</a> -->
+    </div>
+  
+{% endblock content %}
