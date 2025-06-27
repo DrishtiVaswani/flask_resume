@@ -153,7 +153,7 @@ def gemini():
     if(request.method=='POST'):
         return render_template('about.html')
     print("Value of text1 is ", text1)
-    genai.configure(api_key="AIzaSyBttgCnl9LsxRAZ6lAOr_P52YNGx_RwSlg")
+    genai.configure(api_key="xxx")
     model = genai.GenerativeModel(
                 model_name='gemini-2.0-flash',
                 tools='code_execution')
@@ -167,7 +167,7 @@ def gemini1():
     if(request.method=='POST'):
         return render_template('about.html')
     print("Value of text1 is ", text1)
-    genai.configure(api_key="AIzaSyBttgCnl9LsxRAZ6lAOr_P52YNGx_RwSlg")
+    genai.configure(api_key="xxx")
     model = genai.GenerativeModel(
                 model_name='gemini-2.0-flash',
                 tools='code_execution')
@@ -181,7 +181,7 @@ def gemini2():
     if(request.method=='POST'):
         return render_template('about.html')
     print("Value of text1 is ", text1)
-    genai.configure(api_key="AIzaSyBttgCnl9LsxRAZ6lAOr_P52YNGx_RwSlg")
+    genai.configure(api_key="xxx")
     model = genai.GenerativeModel(
                 model_name='gemini-2.0-flash',
                 tools='code_execution')
